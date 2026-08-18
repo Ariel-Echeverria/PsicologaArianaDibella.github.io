@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Psicóloga Dibella — Psicoterapia online para adultos</title>
+<meta name="description" content="Psicoterapia individual online para adultos. Un método estructurado, con objetivos claros y avances que podés ver. Lic. Ariana Dibella.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Sora:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #F8F5FA;
+    --surface: #FFFFFF;
+    --ink: #2B1F38;
+    --ink-soft: #5B4B6E;
+    --ink-faint: #8B7BA0;
+    --violet: #5B3E7A;
+    --violet-deep: #422C5C;
+    --rose: #D9789F;
+    --rose-soft: #F6D9E4;
+    --lilac-soft: #EBE4F5;
+    --line: #DED2EA;
+    --whatsapp: #5B3E7A;
+    --radius: 18px;
+    --max: 760px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Sora', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    line-height:1.15;
+    letter-spacing:-0.01em;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--violet);
+    display:inline-flex;
+    align-items:center;
+    gap:0.5em;
+    margin-bottom:1rem;
+  }
+  .eyebrow::before{
+    content:"";
+    width:1.4em; height:1px;
+    background:var(--violet);
+    display:inline-block;
+  }
+  .wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:0 24px;
+  }
+  .wrap-wide{
+    max-width:1040px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(248,245,250,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    max-width:1040px; margin:0 auto; padding:14px 24px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .brand{ display:flex; align-items:center; gap:10px; text-decoration:none;}
+  .brand img{ width:34px; height:34px; }
+  .brand span{ font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem; color:var(--ink);}
+  .nav-links{ display:flex; align-items:center; gap:28px; }
+  .nav-links a{
+    font-size:0.92rem; text-decoration:none; color:var(--ink-soft);
+    transition:color .2s;
+  }
+  .nav-links a:hover{ color:var(--violet); }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Sora', sans-serif; font-weight:600; font-size:0.92rem;
+    padding:12px 22px; border-radius:100px;
+    text-decoration:none; border:none; cursor:pointer;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-primary{
+    background:var(--violet); color:#fff;
+    box-shadow:0 8px 20px -8px rgba(91,62,122,0.55);
+  }
+  .btn-primary:hover{ box-shadow:0 12px 28px -8px rgba(91,62,122,0.65); }
+  .btn-ghost{
+    background:transparent; color:var(--violet);
+    border:1.5px solid var(--violet);
+  }
+  .btn-sm{ padding:9px 16px; font-size:0.82rem; }
+  .nav-cta{ display:none; }
+  @media(min-width:720px){ .nav-cta{ display:inline-flex; } }
+  .nav-links{ display:none; }
+  @media(min-width:900px){ .nav-links{ display:flex; } }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:88px 0 72px;
+    position:relative;
+  }
+  .hero .wrap{ text-align:center; }
+  .hero h1{
+    font-size:clamp(2.1rem, 5vw, 3.2rem);
+    max-width:14ch;
+    margin:0 auto 22px;
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:var(--violet);
+    position:relative;
+  }
+  .hero p.lead{
+    font-size:1.12rem;
+    color:var(--ink-soft);
+    max-width:46ch;
+    margin:0 auto 36px;
+  }
+  .hero-ctas{
+    display:flex; flex-direction:column; align-items:center; gap:14px;
+  }
+  .btn-lg{ padding:16px 30px; font-size:1rem; }
+  .hero-alt{
+    font-size:0.88rem; color:var(--ink-faint);
+    text-decoration:underline; text-underline-offset:3px;
+    background:none; border:none; cursor:pointer; font-family:'Sora',sans-serif;
+  }
+  .hero-tags{
+    margin-top:44px; display:flex; flex-wrap:wrap; justify-content:center; gap:10px;
+  }
+  .tag{
+    font-family:'IBM Plex Mono', monospace; font-size:0.74rem;
+    color:var(--ink-soft); background:var(--surface);
+    border:1px solid var(--line); padding:6px 14px; border-radius:100px;
+  }
+
+  /* ---------- SECTION GENERIC ---------- */
+  section{ padding:76px 0; }
+  .section-alt{ background:var(--lilac-soft); }
+  .section-rose{ background:var(--rose-soft); }
+  h2{ font-size:clamp(1.7rem, 3.4vw, 2.3rem); margin-bottom:16px; max-width:20ch;}
+  .section-intro{ color:var(--ink-soft); max-width:56ch; margin-bottom:44px; font-size:1.02rem;}
+
+  /* ---------- DIFERENCIA ---------- */
+  .diff-grid{
+    display:grid; gap:20px;
+    grid-template-columns:1fr;
+  }
+  @media(min-width:720px){ .diff-grid{ grid-template-columns:repeat(3,1fr);} }
+  .diff-card{
+    background:var(--surface); border-radius:var(--radius);
+    padding:28px 26px; border:1px solid var(--line);
+  }
+  .diff-card .num{
+    font-family:'IBM Plex Mono', monospace; color:var(--rose);
+    font-size:0.82rem; margin-bottom:14px; display:block;
+  }
+  .diff-card h3{ font-size:1.12rem; margin-bottom:8px; font-weight:600;}
+  .diff-card p{ color:var(--ink-soft); font-size:0.95rem; }
+
+  /* ---------- METODO / TIMELINE ---------- */
+  .timeline{
+    position:relative;
+    padding-left:38px;
+  }
+  .thread{
+    position:absolute; left:9px; top:6px; bottom:6px; width:2px;
+    background:var(--line);
+  }
+  .thread-fill{
+    position:absolute; left:9px; top:6px; width:2px; height:0%;
+    background:linear-gradient(180deg, var(--rose), var(--violet));
+    transition:height 1.4s cubic-bezier(.2,.7,.3,1);
+  }
+  .step{
+    position:relative;
+    padding-bottom:44px;
+  }
+  .step:last-child{ padding-bottom:0; }
+  .step-dot{
+    position:absolute; left:-38px; top:2px;
+    width:20px; height:20px; border-radius:50%;
+    background:var(--surface); border:2px solid var(--rose);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .step-dot::after{
+    content:""; width:8px; height:8px; border-radius:50%;
+    background:var(--violet);
+  }
+  .step .tag-price{
+    display:inline-block; font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem; color:var(--violet); background:var(--rose-soft);
+    padding:3px 10px; border-radius:100px; margin-bottom:8px;
+  }
+  .step h3{ font-size:1.15rem; margin-bottom:8px; font-weight:600;}
+  .step p{ color:var(--ink-soft); font-size:0.96rem; max-width:52ch;}
+
+  /* ---------- RECURSOS ---------- */
+  .res-grid{
+    display:grid; gap:18px; grid-template-columns:1fr;
+  }
+  @media(min-width:720px){ .res-grid{ grid-template-columns:1fr 1fr; } }
+  .res-card{
+    background:var(--surface); border-radius:var(--radius);
+    padding:26px; border:1px solid var(--line);
+    display:flex; gap:16px; align-items:flex-start;
+  }
+  .res-icon{
+    width:40px; height:40px; border-radius:12px;
+    background:var(--lilac-soft); flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    color:var(--violet); font-family:'Fraunces',serif; font-weight:600;
+  }
+  .res-card h3{ font-size:1.02rem; margin-bottom:6px; font-weight:600; }
+  .res-card p{ color:var(--ink-soft); font-size:0.92rem; }
+
+  /* ---------- PARA QUIEN ---------- */
+  .audience{
+    background:var(--surface); border:1px solid var(--line);
+    border-radius:24px; padding:40px 32px;
+  }
+  .audience ul{ list-style:none; display:grid; gap:14px; margin-top:24px;}
+  @media(min-width:640px){ .audience ul{ grid-template-columns:1fr 1fr; } }
+  .audience li{
+    display:flex; gap:10px; align-items:flex-start;
+    font-size:0.98rem; color:var(--ink);
+  }
+  .audience li::before{
+    content:"—"; color:var(--rose); font-weight:700; flex-shrink:0;
+  }
+
+  /* ---------- SOBRE MI ---------- */
+  .about{
+    display:flex; flex-direction:column; gap:28px; align-items:center; text-align:center;
+  }
+  @media(min-width:720px){ .about{ flex-direction:row; text-align:left; } }
+  .about-photo{
+    width:120px; height:120px; border-radius:50%; flex-shrink:0;
+    background:var(--lilac-soft); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+  }
+  .about-photo img{ width:112px; }
+  .about p{ color:var(--ink-soft); }
+  .about h3{ font-size:1.3rem; margin-bottom:10px; }
+
+  /* ---------- INVERSION ---------- */
+  .price-note{
+    background:var(--surface); border:1px solid var(--line);
+    border-radius:var(--radius); padding:24px 26px; margin-bottom:32px;
+    font-size:0.96rem; color:var(--ink-soft);
+  }
+  .price-note strong{ color:var(--ink); }
+  .price-grid{
+    display:grid; gap:20px; grid-template-columns:1fr;
+  }
+  @media(min-width:640px){ .price-grid{ grid-template-columns:1fr 1fr; } }
+  .price-card{
+    background:var(--surface); border-radius:var(--radius);
+    padding:30px 28px; border:1px solid var(--line); position:relative;
+  }
+  .price-card.featured{ border-color:var(--violet); box-shadow:0 12px 32px -14px rgba(91,62,122,.35); }
+  .price-card .tag{ margin-bottom:14px; display:inline-block; }
+  .price-card .amount{
+    font-family:'Fraunces', serif; font-size:2.1rem; font-weight:600; color:var(--violet);
+    margin-bottom:6px;
+  }
+  .price-card .amount span{ font-family:'Sora',sans-serif; font-size:0.9rem; color:var(--ink-faint); font-weight:400;}
+  .price-card p{ color:var(--ink-soft); font-size:0.92rem; margin-top:10px;}
+
+  /* ---------- FAQ ---------- */
+  .faq-item{
+    border-bottom:1px solid var(--line);
+  }
+  .faq-item:first-child{ border-top:1px solid var(--line); }
+  .faq-q{
+    width:100%; text-align:left; background:none; border:none; cursor:pointer;
+    padding:22px 4px; display:flex; justify-content:space-between; align-items:center;
+    font-family:'Sora',sans-serif; font-weight:600; font-size:1rem; color:var(--ink);
+    gap:16px;
+  }
+  .faq-q .plus{
+    font-family:'IBM Plex Mono',monospace; color:var(--violet); font-size:1.2rem;
+    transition:transform .3s ease; flex-shrink:0;
+  }
+  .faq-item.open .faq-q .plus{ transform:rotate(45deg); }
+  .faq-a{
+    max-height:0; overflow:hidden; transition:max-height .35s ease;
+    color:var(--ink-soft); font-size:0.95rem;
+  }
+  .faq-a-inner{ padding:0 4px 22px; max-width:60ch;}
+
+  /* ---------- FINAL CTA ---------- */
+  .final-cta{
+    background:var(--violet); color:#fff; border-radius:28px;
+    padding:56px 32px; text-align:center;
+  }
+  .final-cta h2{ color:#fff; margin:0 auto 14px; }
+  .final-cta p{ color:#E4D9EF; max-width:44ch; margin:0 auto 32px; }
+  .final-cta .btn-primary{ background:#fff; color:var(--violet); }
+  .final-cta .btn-ghost{ border-color:rgba(255,255,255,0.5); color:#fff; }
+  .final-cta .hero-ctas{ }
+
+  /* ---------- FORM (modal-ish inline panel) ---------- */
+  #formPanel{
+    display:none; margin-top:20px; text-align:left;
+    background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.25);
+    border-radius:16px; padding:24px;
+  }
+  #formPanel.show{ display:block; }
+  #formPanel label{ display:block; font-size:0.82rem; margin-bottom:6px; color:#E4D9EF;}
+  #formPanel input, #formPanel textarea{
+    width:100%; padding:11px 13px; border-radius:10px; border:none;
+    margin-bottom:14px; font-family:'Sora',sans-serif; font-size:0.92rem;
+    background:#fff; color:var(--ink);
+  }
+  #formPanel textarea{ min-height:80px; resize:vertical; }
+
+  /* ---------- FOOTER ---------- */
+  footer{ padding:52px 0 40px; }
+  .foot-grid{
+    display:flex; flex-direction:column; gap:28px;
+  }
+  @media(min-width:720px){ .foot-grid{ flex-direction:row; justify-content:space-between; } }
+  .foot-brand{ display:flex; align-items:center; gap:10px; margin-bottom:12px;}
+  .foot-brand img{ width:28px; }
+  .foot-brand span{ font-family:'Fraunces',serif; font-weight:600; }
+  footer .cols{ display:flex; gap:60px; flex-wrap:wrap; }
+  footer h4{ font-size:0.82rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-faint); margin-bottom:12px; font-family:'IBM Plex Mono',monospace; font-weight:400;}
+  footer a, footer p{ font-size:0.9rem; color:var(--ink-soft); text-decoration:none; margin-bottom:8px; display:block;}
+  .ethics{
+    margin-top:40px; padding-top:28px; border-top:1px solid var(--line);
+    font-size:0.82rem; color:var(--ink-faint); max-width:70ch;
+  }
+
+  /* ---------- REVEAL ---------- */
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition:none !important; scroll-behavior:auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="#" class="brand">
+      <img src="https://github.com/Ariel-Echeverria/PsicologaArianaDibella.github.io/blob/f1d5d42114e39c5970f16e737c2813340e266bb0/logoPsicoDibella.png?raw=true" alt="Psicóloga Dibella">
+      <span>Psicóloga Dibella</span>
+    </a>
+    <div class="nav-links">
+      <a href="#metodo">Método</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#para-quien">¿Es para vos?</a>
+      <a href="#inversion">Inversión</a>
+      <a href="#preguntas">Preguntas</a>
+    </div>
+    <a href="https://wa.me/5491132946835?text=Hola%20Ariana%2C%20quiero%20conocer%20más%20sobre%20las%20sesiones" class="btn btn-primary btn-sm nav-cta" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Psicoterapia online para adultos</p>
+    <h1>Rendís bien puertas afuera. <em>Puertas adentro, no tanto.</em></h1>
+    <p class="lead">Trabajamos ansiedad, ataques de pánico, estrés, crisis vitales, duelos y trauma de infancia con un método estructurado: objetivos claros desde el principio y avances que podés ver, no solo sentir.</p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/5491132946835?text=Hola%20Ariana%2C%20quiero%20conocer%20más%20sobre%20las%20sesiones" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+        Escribir por WhatsApp
+      </a>
+      <button class="hero-alt" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">¿Te cuesta dar el primer paso? Preferí el formulario</button>
+    </div>
+    <div class="hero-tags">
+      <span class="tag">Modalidad 100% online</span>
+      <span class="tag">Adultos 24–40+</span>
+      <span class="tag">Sesión semanal</span>
+    </div>
+  </div>
+</section>
+
+<section id="diferencia">
+  <div class="wrap reveal">
+    <p class="eyebrow">Por qué esto es distinto</p>
+    <h2>No es la terapia del silencio incómodo.</h2>
+    <p class="section-intro">Acá trabajamos en equipo. Sesiones dinámicas, con devolución constante — y vos también podés preguntar sobre tu propio proceso, en cualquier momento.</p>
+    <div class="diff-grid">
+      <div class="diff-card">
+        <span class="num">01</span>
+        <h3>Ida y vuelta real</h3>
+        <p>Feedback constante en sesión, no monólogos ni silencios que te dejan más incómodo de lo que llegaste.</p>
+      </div>
+      <div class="diff-card">
+        <span class="num">02</span>
+        <h3>Objetivos que se ven</h3>
+        <p>Definimos metas terapéuticas concretas y las revisamos juntos — sabés en qué punto del camino estás.</p>
+      </div>
+      <div class="diff-card">
+        <span class="num">03</span>
+        <h3>Terapia entre sesiones</h3>
+        <p>El proceso no termina cuando se corta la videollamada. Seguís trabajando con recursos propios, a tu ritmo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="metodo" class="section-alt">
+  <div class="wrap reveal">
+    <p class="eyebrow">Cómo es el camino</p>
+    <h2>El método, paso a paso</h2>
+    <p class="section-intro">Cada etapa tiene un propósito claro. Nada de empezar a hablar sin saber hacia dónde vamos.</p>
+
+    <div class="timeline" id="timelineEl">
+      <div class="thread"></div>
+      <div class="thread-fill" id="threadFill"></div>
+
+      <div class="step">
+        <div class="step-dot"></div>
+        <span class="tag-price">Entrevista de admisión — $10.000</span>
+        <h3>Nos conocemos</h3>
+        <p>Un primer encuentro para que me cuentes tu motivo de consulta, te presente cómo trabajo y despejemos cualquier duda antes de empezar. Es un espacio pago porque implica un compromiso real de ambas partes, no solo una charla exploratoria.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-dot"></div>
+        <h3>Consentimiento y agenda</h3>
+        <p>Si decidís continuar, firmamos el consentimiento informado y definimos juntos el día y horario fijo de tu sesión semanal.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-dot"></div>
+        <h3>Las primeras sesiones, para conocerte en profundidad</h3>
+        <p>Durante las primeras seis sesiones nos dedicamos a entender tu historia, tu presente y tus proyectos a futuro — tu motivo de consulta ampliado, tus vínculos significativos, tus momentos clave. No es un trámite: es la base sobre la que se construye todo lo que sigue.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-dot"></div>
+        <h3>Objetivos terapéuticos co-construidos</h3>
+        <p>Con esa base, armamos juntos los objetivos que vamos a trabajar. Se revisan periódicamente y se ajustan según cómo vas avanzando — el proceso es tuyo, no un protocolo genérico.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-dot"></div>
+        <h3>Seguimiento y frecuencia</h3>
+        <p>Trabajamos con frecuencia semanal. La modalidad quincenal solo se habilita después de evaluar al menos seis sesiones, para asegurarnos de que el proceso pueda sostenerse bien con ese espaciado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="recursos">
+  <div class="wrap reveal">
+    <p class="eyebrow">Entre sesiones</p>
+    <h2>La terapia no termina cuando se corta la llamada</h2>
+    <p class="section-intro">Uso distintos recursos para que puedas seguir trabajando por fuera de la sesión, a tu ritmo y con lo que te resuene.</p>
+    <div class="res-grid">
+      <div class="res-card">
+        <div class="res-icon">D</div>
+        <div>
+          <h3>Tu documento personal</h3>
+          <p>Un espacio digital compartido solo entre vos y yo, tipo diario, para anotar lo que vas sintiendo durante la semana o lo que quieras traer a la próxima sesión.</p>
+        </div>
+      </div>
+      <div class="res-card">
+        <div class="res-icon">H</div>
+        <div>
+          <h3>Herramientas y guías</h3>
+          <p>PDFs y recursos concretos para llevar a la práctica lo que trabajamos, cuando lo necesites.</p>
+        </div>
+      </div>
+      <div class="res-card">
+        <div class="res-icon">R</div>
+        <div>
+          <h3>Todo recurso es válido</h3>
+          <p>Reels, canciones, películas — si te ayuda a expresar lo que te pasa, lo incorporamos como material de trabajo.</p>
+        </div>
+      </div>
+      <div class="res-card">
+        <div class="res-icon">P</div>
+        <div>
+          <h3>Un perfil que se construye con vos</h3>
+          <p>Voy armando un análisis de tu proceso a lo largo del camino — lo que decís y también lo que aparece entre líneas — para que los objetivos sigan siendo precisos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="para-quien" class="section-rose">
+  <div class="wrap reveal">
+    <p class="eyebrow">¿Es esto para vos?</p>
+    <h2>Si te reconocés en algo de esto, hablemos</h2>
+    <div class="audience">
+      <p style="color:var(--ink-soft)">Trabajo con adultos que suelen funcionar bien puertas afuera — laburo, estudio, responsabilidades — pero que puertas adentro están lidiando con algo que ya no pueden sostener solos.</p>
+      <ul>
+        <li>Ansiedad que no te suelta, aunque "todo esté bien"</li>
+        <li>Ataques de pánico, presentes o pasados</li>
+        <li>Estrés sostenido que empieza a afectar tu día a día</li>
+        <li>Una crisis vital: cambio de etapa, de rumbo, de identidad</li>
+        <li>Un duelo que necesitás transitar acompañado</li>
+        <li>Cosas de tu infancia o adolescencia que siguen pesando hoy</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="sobre-mi">
+  <div class="wrap reveal">
+    <div class="about">
+      <div class="about-photo"><img src="https://github.com/Ariel-Echeverria/PsicologaArianaDibella.github.io/blob/f1d5d42114e39c5970f16e737c2813340e266bb0/fotoPsicoDibella.jpeg?raw=true" alt=""></div>
+      <div>
+        <p class="eyebrow">Sobre mí</p>
+        <h3>Lic. Ariana Dibella</h3>
+        <p>Psicóloga clínica especializada en psicoterapia individual online para adultos. Trabajo con un enfoque integrativo — terapia cognitivo-conductual, regulación emocional, recursos narrativos y somáticos — eligiendo en cada caso lo que realmente sirve, no una técnica única para todos los pacientes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="inversion" class="section-alt">
+  <div class="wrap reveal">
+    <p class="eyebrow">Inversión</p>
+    <h2>Sabemos que el precio importa. Por eso te mostramos el proceso, no solo el número.</h2>
+    <div class="price-note">
+      Lo que suele generar dudas con el honorario no es el valor de la sesión en sí, sino no saber <strong>cuándo</strong> esa inversión empieza a rendir. Por eso trabajamos con objetivos terapéuticos claros desde las primeras sesiones y los revisamos juntos a medida que avanzamos, para que puedas ver en qué punto del camino estás — aunque el ritmo de cada proceso sea propio y no se pueda prometer un plazo fijo para todos los casos.
+    </div>
+    <div class="price-grid">
+      <div class="price-card">
+        <span class="tag">Primer paso</span>
+        <div class="amount">$10.000</div>
+        <p>Entrevista de admisión. Conocernos, contarme tu motivo de consulta y despejar dudas sobre la modalidad.</p>
+      </div>
+      <div class="price-card featured">
+        <span class="tag">Proceso terapéutico</span>
+        <div class="amount">$39.000 <span>/ sesión</span></div>
+        <p>Sesión individual semanal de psicoterapia online. Frecuencia quincenal disponible tras evaluación de sostenibilidad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="preguntas">
+  <div class="wrap reveal">
+    <p class="eyebrow">Preguntas frecuentes</p>
+    <h2>Antes de escribir, capaz esto ya te responde algo</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q"><span>¿Qué pasa en la primera sesión?</span><span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Escucho tu motivo de consulta inicial y te presento mi modalidad de trabajo. Ahí acordamos el encuadre y los próximos pasos juntas.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>¿Cuánto dura el proceso terapéutico?</span><span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Es único para cada persona: se adapta a tus objetivos y a tu ritmo. Hacemos revisiones periódicas para asegurarnos de que el trabajo siga siendo pertinente a lo que necesitás.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>¿La modalidad online es realmente efectiva?</span><span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Sí. Trabajamos con plataformas seguras y los mismos recursos se adaptan para que el espacio sea igual de cercano y útil que uno presencial.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>¿Puedo pedir reintegro a mi obra social?</span><span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Si necesitás gestionar reintegros con tu cobertura, te oriento con los pasos habituales y la documentación que solés necesitar.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>¿Qué pasa si necesito cancelar una sesión?</span><span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Con 24 horas de antelación podemos reprogramar, sujeto a disponibilidad de agenda.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap reveal">
+    <div class="final-cta">
+      <h2>Demos el primer paso</h2>
+      <p>Contame brevemente qué te trae por acá y coordinamos la entrevista de admisión.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/5491132946835?text=Hola%20Ariana%2C%20quiero%20conocer%20más%20sobre%20las%20sesiones" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        <button class="hero-alt" style="color:#E4D9EF" onclick="document.getElementById('formPanel').classList.toggle('show')">¿Te incomoda dar el primer paso? Completá el formulario y te contacto yo</button>
+      </div>
+      <div id="formPanel">
+        <form id="contactForm">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+          <label for="motivo">Contame brevemente qué te gustaría trabajar</label>
+          <textarea id="motivo" required></textarea>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap-wide">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <img src="https://github.com/Ariel-Echeverria/PsicologaArianaDibella.github.io/blob/f1d5d42114e39c5970f16e737c2813340e266bb0/logoPsicoDibella.png?raw=true" alt="">
+          <span>Psicóloga Dibella</span>
+        </div>
+        <p style="max-width:32ch">Psicoterapia individual online para adultos.</p>
+      </div>
+      <div class="cols">
+        <div>
+          <h4>Contacto</h4>
+          <a href="https://wa.me/5491132946835" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="mailto:lic.arianadibella@gmail.com">lic.arianadibella@gmail.com</a>
+          <a href="https://www.instagram.com/psicologadibella/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+        <div>
+          <h4>Atención</h4>
+          <p>Lunes a viernes</p>
+          <p>9 a 12 y 16 a 20 hs</p>
+          <p>Modalidad online</p>
+        </div>
+      </div>
+    </div>
+    <p class="ethics">El contenido compartido en esta página y el servicio de psicoterapia ofrecido no reemplazan la atención de emergencias clínicas o psiquiátricas. Ante una situación de urgencia o riesgo inmediato, acercate a la guardia de salud mental o al servicio de emergencias más cercano de tu zona.</p>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
+  }, {threshold:0.12});
+  revealEls.forEach(el=>io.observe(el));
+
+  // Thread fill draws as the timeline scrolls into view
+  const timelineEl = document.getElementById('timelineEl');
+  const threadFill = document.getElementById('threadFill');
+  function updateThread(){
+    const rect = timelineEl.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const total = rect.height;
+    const start = vh * 0.85;
+    const progressPx = start - rect.top;
+    let pct = (progressPx / (total + vh*0.4)) * 100;
+    pct = Math.max(0, Math.min(100, pct));
+    threadFill.style.height = pct + '%';
+  }
+  window.addEventListener('scroll', updateThread);
+  window.addEventListener('resize', updateThread);
+  updateThread();
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o=>{
+        o.classList.remove('open');
+        o.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // Contact form -> mailto fallback (sin backend propio)
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const motivo = document.getElementById('motivo').value;
+    const body = encodeURIComponent(`Nombre: ${nombre}\nEmail: ${email}\n\nMotivo de consulta:\n${motivo}`);
+    window.location.href = `mailto:lic.arianadibella@gmail.com?subject=Consulta%20desde%20la%20web&body=${body}`;
+  });
+</script>
+
+</body>
+</html>
